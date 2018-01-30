@@ -14,7 +14,7 @@
 	
 2.noPath(不检测路径)
 
-	如:noPath = ['ThirdLibs','iosTools']
+	如:noPath = ['Pods','VidSaiTests','VidSaiUITests']
 	
 	或:noPath = None(检测工程下所有路径)
 	
