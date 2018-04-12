@@ -1,19 +1,23 @@
 # -*- coding: utf-8 -*-
-
 import sys
 import os
 import Foundation
 import objc
 import AppKit
+
 from datetime import date, time, datetime, timedelta
 
 #工程路径
-projectPath = "/Users/a28/Desktop/gitFile/vidsai"
+projectPath = "/Users/a28/Desktop/gitFile/app"
 #不检测路径
 noPath = ['Pods','VidSaiTests','VidSaiUITests']
-#noPath = None(检测工程下所有路径)
+#noPath = None
+#(检测工程下所有路径)
 #False:检测所有,True:不检测不检测路径和动画产生的self
 NormalCheck = True
+
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 def notify(self, title, subtitle, text, url):
     NSUserNotification = objc.lookUpClass('NSUserNotification')
@@ -204,6 +208,6 @@ def start():
     print("==============================================================")
     for filePath in files_list:
         getFileContent(filePath)
-
+    return
 start()
 runTask(start, day=0, hour=0, min=10,second=0)
